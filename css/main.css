@@ -225,7 +225,7 @@ ul, ol {
 }
 
 .client-logo {
-    width: 150px; /* Ajuste o tamanho conforme necessário */
+    width: 200px; /* Ajuste o tamanho conforme necessário */
     height: auto;
     margin: 0 25px; /* Espaçamento entre as logos */
     flex-shrink: 0; /* Garante que as imagens não se ajustem de tamanho */
