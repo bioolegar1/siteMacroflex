@@ -207,44 +207,98 @@ ul, ol {
     margin-bottom: 40px;
 }
 
-/* Estilo do carrossel */
 .carousel-container {
-    overflow: hidden; /* Oculta as imagens fora da área visível */
-    width: 100%;
+    padding: 10px 0;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    white-space: nowrap;
 }
 
 .carousel {
-    display: flex;
-    width: 200%; /* Dobrar a largura para acomodar as logos duplicadas */
+    display: inline-block;
+    animation: 30s slide infinite linear;
 }
 
-.carousel-track {
-    display: flex;
-    width: 100%;
-    animation: scroll 20s linear infinite paused; /* Inicialmente pausado */
-}
-
-.client-logo {
-    width: 200px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    margin: 0 25px; /* Espaçamento entre as logos */
-    flex-shrink: 0; /* Garante que as imagens não se ajustem de tamanho */
-}
-
-/* Animação de movimento contínuo para o carrossel */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
+@keyframes slide {
+    from {
+        transform: translateX(0%);
     }
-    100% {
-        transform: translateX(-50%); /* Move até a metade, pois duplicamos as logos */
+    to {
+        transform: translateX(-100%);
     }
 }
 
-/* Classe para iniciar a animação */
-.animate {
-    animation-play-state: running;
+.carousel-container:hover .carousel {
+    animation-play-state: paused;
 }
+
+.carousel img {
+    height: 100%    ;
+    margin: 40px;
+}
+
+.parceiros {
+    margin-top: 20px;
+}
+
+.testimonials {
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1rem;
+}
+
+.testimonial-card {
+    gap: 20px;
+    width: 300px;
+    height: 400px;
+    background: #eaf4ffs;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.testimonial-text {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.stars i {
+    margin-right: 0.2rem;
+}
+
+.author {
+    font-weight: bold;
+    color: #333;
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
