@@ -160,6 +160,7 @@ ul, ol {
     background-size: cover;
     background-position: center;
     color: #fff;
+    border-radius: 15px;
 
 }
 
@@ -187,12 +188,17 @@ ul, ol {
     font-size: 2rem;
     font-weight: bold;
     color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
 }
 
 .feature-description {
+    font-weight: bold;
     font-size: 1.2rem;
-    color: #ddd;
+    color: var(--color-white);
     margin-top: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+
 }
 
 /* Estilos para a seção de clientes */
@@ -327,6 +333,13 @@ ul, ol {
     background: var(--color-white);
 }
 
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
