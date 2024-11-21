@@ -299,6 +299,34 @@ ul, ol {
     color: #333;
 }
 
+.orcamento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-reflex);
+    padding: 40px 0;
+}
+
+.orcamento_div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 0px 200px 0px 200px;
+}
+
+.orcamento_div h2 {
+    font-size: 2rem;
+    color: var(--color-white);
+}
+
+.orcamento_div button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: var(--color-white);
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
