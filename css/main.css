@@ -24,9 +24,12 @@ html, body {
     color: var(--color-text);
 }
 
-body {}
+body {
+    margin: 0;
+    padding: 0;
+}
 
-ul, ol {
+ul, ol, li{
     list-style-type: none;  /* Remove as marcas de lista (como os pontos ou números) */
     margin: 0;              /* Remove a margem padrão */
     padding: 0;             /* Remove o preenchimento padrão */
@@ -36,19 +39,22 @@ ul, ol {
 .mensagemTopo {
     display: flex;
     background-color: var(--color-reflex);
-    padding-top: 5px;
+    padding-top: 3px;
     justify-content: center;
     color: var(--color-white);
 
 }
 /* Centralizando a seção .header */
-.header {
+header {
     width: 100%;
     background-color: #f8f9fa;  /* Cor de fundo do menu */
-    padding: 10px 0;
+    /*padding: 10px 0;*/
     display: flex;
     justify-content: center;    /* Centraliza o conteúdo horizontalmente */
     align-items: center;        /* Centraliza o conteúdo verticalmente */
+    margin: 0;
+    padding: 0;
+
 }
 
 .container {
@@ -56,7 +62,7 @@ ul, ol {
     justify-content: center;    /* Centraliza o conteúdo horizontalmente */
     align-items: center;        /* Centraliza o conteúdo verticalmente */
     width: 100%;
-}
+    }
 
 /* Flexbox para o menu */
 .menuTopTexto {
@@ -64,14 +70,12 @@ ul, ol {
     justify-content: center;     /* Centraliza os itens horizontalmente */
     align-items: center;         /* Alinha os itens verticalmente no centro */
     list-style-type: none;       /* Remove os marcadores da lista */
-    padding: 0;                  /* Remove o padding da lista */
-    margin: 0;                   /* Remove a margem da lista */
 }
 
 /* Estilos para os itens da lista */
 .menuTopTexto li {
-    padding: 0px 10px 0px 10px;
     margin-right: 20px;          /* Espaçamento entre os itens */
+    /*margin: 0;*/
 }
 
 /* Estilos para os links do menu */
@@ -81,23 +85,27 @@ ul, ol {
     font-weight: normal;         /* Define a espessura da fonte */
     display: flex;               /* Garante que o link tenha o mesmo tamanho que os itens */
     align-items: center;         /* Alinha o texto na mesma altura */
-    font-size: 16px;             /* Tamanho da fonte */
+    font-size: 1.3rem;             /* Tamanho da fonte */
+    height: 40px;
+    padding: 50px;
+    margin: 0;
 }
 
 /* Efeito hover no link */
 .nav-link:hover {
-    color: #007bff;              /* Cor do texto quando passar o mouse */
+    color: var(--color-bluehover);              /* Cor do texto quando passar o mouse */
+    transform: scale(1.1);
 }
 
 /* Logo */
 .navbar-brand {
-    margin-right: 40px;          /* Espaçamento entre o logo e o primeiro item */
+    margin-right: 10%;          /* Espaçamento entre o logo e o primeiro item */
 
 }
 
 /* Ajuste do logo */
 .img-logo {
-    max-width: 200px;            /* Limita a largura do logo */
+    max-width: 300px;            /* Limita a largura do logo */
     height: auto;                /* Mantém a proporção do logo */
 }
 
@@ -107,13 +115,21 @@ ul, ol {
     height: 10px;
     background: var(--color-reflex);
     color: var(--color-reflex);
+    margin: 0;
+
 }
 
 .contatoTop {
     background: var(--color-reflex);
     color: var(--color-white);
     border-radius: 20px;
-    padding: 6px 25px;
+    transition: 0.4s;
+    }
+
+.contatoTop:hover {
+    background: var(--color-bluehover);
+    color: var(--color-reflex);
+    border-radius: 20px;
 }
 
 /* Estilos para a seção hero */
@@ -143,10 +159,9 @@ ul, ol {
 }
 
 .hero-section .btn-primary {
-    background-color: #001f3f;
-    border-color: #001f3f;
+    background-color:var(--color-reflex);
+    border-color:var(--color-reflex);
     font-size: 1rem;
-    padding: 10px 20px;
 }
 
 .hero-image {
@@ -169,9 +184,16 @@ ul, ol {
     color: #fff;
 
 }
+.card-fundo-direita{
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    background-color: #4e555b;
+    border-radius: 8px;
+}
 
 .feature-card {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     color: #333;
 }
@@ -192,18 +214,21 @@ ul, ol {
 
 .feature-title {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 900;
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: right;
 
 }
 
 .feature-description {
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-weight: normal;
+    font-size: 1.5rem;
     color: var(--color-white);
     margin-top: 10px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    text-align: right;
+
 
 }
 
@@ -263,17 +288,17 @@ ul, ol {
 }
 
 .testimonials {
-
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2rem 1rem;
+    color: var(--color-reflex);
 }
 
 .testimonial-card {
     gap: 20px;
     width: 300px;
     height: 400px;
-    background: #eaf4ffs;
+    background: var(--color-white);
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
@@ -288,6 +313,7 @@ ul, ol {
 .testimonial-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
 }
 
 .testimonial-photo {
@@ -347,10 +373,13 @@ ul, ol {
     color: white; /* Cor do texto do botão */
     border-radius: 5px; /* Bordas arredondadas */
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .orcamento_div button:hover {
     background-color: #0056b3; /* Cor ao passar o mouse */
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
