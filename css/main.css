@@ -251,6 +251,11 @@ ul, ol {
 .carousel img {
     height: 100%    ;
     margin: 40px;
+    transition: all 0.4s;
+}
+
+.carousel img:hover {
+    transform: scale(1.2);
 }
 
 .parceiros {
@@ -315,29 +320,39 @@ ul, ol {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--color-reflex);
-    padding: 40px 0;
+    background-color: var(--color-reflex); /* Cor de fundo opcional */
+    padding: 40px;
+    color: var(--color-white);
+
+
 }
 
 .orcamento_div {
-    align-items: center;
     display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-    padding: 0px 200px 0px 200px;
+    align-items: center;
+    gap: 100px; /* Espaçamento entre o texto e o botão */
 }
 
 .orcamento_div h2 {
-    font-size: 2rem;
-    color: var(--color-white);
+    margin: 0; /* Remove margens padrão */
+    font-size: 1.5rem; /* Ajusta o tamanho do texto */
+    font-weight: bold;
 }
 
 .orcamento_div button {
-    padding: 10px 20px;
+    padding: 10px 20px; /* Ajuste de tamanho do botão */
+    font-size: 1rem;
     border: none;
-    border-radius: 5px;
-    background: var(--color-white);
+    background-color: #007bff; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
 }
+
+.orcamento_div button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
 
 footer {
     width: 100%;
@@ -467,10 +482,52 @@ footer {
     font-weight: 100;
 }
 
-.fotos_fabrica{
-    height: 400px;
-    width: 100%;
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre as fotos */
+    margin: 40px 0; /* Margem superior e inferior */
+    /*background-color: var(--color-separate);*/
+    height: 410px !important;
 }
+
+.galeria_item {
+    text-align: center;
+    position: relative;
+    width: 350px; /* Largura de cada item */
+}
+
+.galeria_item p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color-reflex);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease; /* Efeito suave */
+
+}
+
+.galeria_item img {
+    width: 100%; /* Ajusta a largura ao container */
+    height: 300px; /* Altura fixa */
+    object-fit: cover; /* Garante que a imagem preencha sem distorção */
+    transition: transform 0.3s ease; /* Efeito suave */
+    border-radius: 10px; /* Bordas arredondadas (opcional) */
+    background-color: var(--color-white);
+}
+
+.galeria_item img:hover {
+    transform: scale(1.1); /* Efeito de zoom */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra no hover */
+}
+
+.galeria_item p:hover {
+    transform: scale(1.1);
+}
+
+
+
 
 
 
@@ -479,6 +536,23 @@ footer {
     .footer_content {
         grid-template-columns: repeat(2, 1fr);
         gap:2rem;
+    }
+
+    .orcamento {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--color-reflex);
+
+    }
+
+    .orcamento_div {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin:  0;
+        padding: 0;
     }
 }
 
