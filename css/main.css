@@ -11,6 +11,13 @@
     --color-separate: #cccccc;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
 html, body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     background: var(--color-background);
@@ -160,7 +167,6 @@ ul, ol {
     background-size: cover;
     background-position: center;
     color: #fff;
-    border-radius: 15px;
 
 }
 
@@ -333,13 +339,23 @@ ul, ol {
     background: var(--color-white);
 }
 
-
-.footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
+footer {
+    width: 100%;
+    color: var(--color-text);
 }
+
+.footer_content {
+    background-color: var(--color-reflex);
+}
+
+.fotos_fabrica{
+    height: 400px;
+    width: 100%;
+}
+
+
+
+
 
 /* Responsividade */
 @media (max-width: 768px) {
