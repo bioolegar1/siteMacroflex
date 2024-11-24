@@ -1,33 +1,123 @@
-.sobre-nos .image-placeholder {
-    width: 150px;
-    height: 150px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
+:root {
+    --color-background: #f7f9ff;
+    --color-reflex: #272B6F;
+    --color-text: #4f4f4f;
+    --color-text-out: #90908e;
+    --color-primary: #ffbf00;
+    --color-secondary: #fff2cc;
+    --color-white: #fff;
+    --color-red: #e74c3c;
+    --color-bluehover: #37c8ff;
+    --color-separate: #cccccc;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background: var(--color-background);
+    color: var(--color-text);
+}
+
+header {
+
+}
+
+ul, ol, li{
+    list-style-type: none;  /* Remove as marcas de lista (como os pontos ou números) */
+    margin: 0;              /* Remove a margem padrão */
+    padding: 0;             /* Remove o preenchimento padrão */
+}
+
+a:visited {
+    color: inherit; /* Mantém a cor igual à dos links não visitados */
+    text-decoration: none; /* Remove a sublinha (opcional) */
+}
+
+.mensagemTopo {
     display: flex;
+    background-color: var(--color-reflex);
+    padding-top: 10px;
+    padding-bottom: 7px;
     justify-content: center;
+    color: var(--color-white);
+    user-select: none; /* Evita seleção do texto */
+    -webkit-user-select: none; /* Para navegadores baseados em WebKit */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para navegadores antigos da Microsoft */
+}
+
+.faixaTopo {
+    background-color: var(--color-reflex);
+    padding-bottom: 10px;
+}
+
+
+/*a img tem 320x78px logo do top*/
+.topoMenu {
+    display: flex;
     align-items: center;
-    margin: 0 auto;
+    justify-content: center;
 }
 
-.sobre-nos .image-placeholder i {
-    font-size: 80px;
-    color: #b0b0b0;
+.listaMenuLink {
+    display: flex;
+    padding: 40px 40px 40px 40px;
+    height: 90px;
+    text-decoration: none;
+    align-items: center;
+    transition: 0.4s;
 }
 
-.sobre-nos h2 {
-    font-weight: bold;
-    color: #2c3e50;
+.listaMenuLink:hover {
+    display: flex;
+    background-color: var(--color-separate);
+    height: 90px;
+    text-decoration: none;
+    align-items: center;
 }
 
-.sobre-nos p {
-    color: #4a4a4a;
-    line-height: 1.8;
+
+
+.logoTop {
+    background-color: var(--color-background) !important;
 }
 
-.sobre-nos p.font-weight-bold {
-    color: #2c3e50;
+.logoTop img {
+    transition: 0.4s;
 }
 
-.sobre-nos .text-muted {
-    font-size: 0.9rem;
+.logoTop img:hover {
+    transform: translateY(-4px);
+    transform: scale(1.1);
+}
+
+
+
+.contatoTop b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-reflex);
+    height: 50px;
+    width: 100px;
+    border-radius: 8px;
+    color: var(--color-white);
+    transition: 0.4s;
+}
+
+
+
+.contatoSelecionado{
+    background-color: var(--color-background);
+}
+
+.contatoSelecionado:hover{
+    background-color: var(--color-reflex);
 }
